@@ -56,13 +56,13 @@ class Song
     # data = line.split(" - ")
     # artist_name = data[0]
     # song_name = data[1].gusb(".mp3", "")
-    # 
+    #
     # song = self.new
     # artist_name = song.artist_name
     # song_name = song.name
     # song
-    c = self.new 
-    c.name = filename.split(/[^a-zA-Z\s]|\s-\s/)[1] 
+    c = self.new
+    c.name = filename.split(/[^a-zA-Z\s]|\s-\s/)[1]
     c.artist_name = filename.split(/[^a-zA-Z\s]|\s-\s/)[0]
     c
   end
