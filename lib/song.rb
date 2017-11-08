@@ -40,17 +40,18 @@ class Song
 
     if self.find_by_name(name)
       return true
-    else
-      self.create_by_name(name)
     elsif
       self.find_by_name(name) == nil
       song = self.new
       song.name = name
       song.save
       song
+    else
+      self.create_by_name(name)
+    
     end
   end
-end 
+end
 
 end
 
