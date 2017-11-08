@@ -45,7 +45,7 @@ class Song
     #   song.name = name
     #   song.save
     #   song
-    else 
+    else
       self.create_by_name(name)
 
     end
