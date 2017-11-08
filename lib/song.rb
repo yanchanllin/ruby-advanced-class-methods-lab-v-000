@@ -38,10 +38,17 @@ class Song
 
   def self.find_or_create_by_name(name)
    if self.find_by_name(name)
-     return true
+     return true 
     else
     self.create_by_name(name)
+     elsif self.find_by_name(name) == nil
+       song = self
+       song.name = name
+       song.save
+       song
+     end 
     end
+    
   end
 
   def self.alphabetical
