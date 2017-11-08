@@ -36,10 +36,10 @@ class Song
     end
   end
 
-  def self.find_or_create_by_name(find_song)
+  def self.find_or_create_by_name(name)
     if self.find_by_name(name) || self.create_by_name(name) == nil
       song = self.new
-      song.name = find_song
+      song.name = name
       song.save
       song
     else
@@ -68,9 +68,7 @@ class Song
   end
 
   def self.create_from_filename(filename)
-
     self.new_from_filename(filename).save
-
   end
 
   def self.destroy_all
