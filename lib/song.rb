@@ -38,7 +38,7 @@ class Song
 
   def self.find_or_create_by_name(name)
    if self.find_by_name(name)
-     return true 
+     return true
     else
     self.create_by_name(name)
      elsif self.find_by_name(name) == nil
@@ -46,10 +46,11 @@ class Song
        song.name = name
        song.save
        song
-     end 
+     end
     end
-    
-  end
+  end 
+
+end
 
   def self.alphabetical
     @@all.sort_by { |song| song.name }
