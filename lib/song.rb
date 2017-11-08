@@ -42,7 +42,7 @@ class Song
       return true
     else
       self.create_by_name(name)
-    elsif 
+    elsif
       self.find_by_name(name) == nil
       song = self.new
       song.name = name
@@ -50,6 +50,7 @@ class Song
       song
     end
   end
+end 
 
 end
 
