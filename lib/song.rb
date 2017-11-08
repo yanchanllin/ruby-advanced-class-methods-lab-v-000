@@ -37,18 +37,18 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-
-    if self.find_by_name(name)
-      return true
+self.find_by_name(name) || self.create_by_name(name)
+    # if self.find_by_name(name)
+    #   return true
     # elsif self.find_by_name(name) == nil
     #   song = self.new
     #   song.name = name
     #   song.save
     #   song
-    else self.find_by_name(name) == nil || false
-      self.create_by_name(name)
+    # else self.find_by_name(name) == nil || false
+    #   self.create_by_name(name)
 
-    end
+    # end
   end
 
 
